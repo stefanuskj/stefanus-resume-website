@@ -94,7 +94,9 @@ Mobile (< 768px) - Single-column layout with touch-friendly interactions
 🤝 Connect With Me
 
 💼 LinkedIn: https://www.linkedin.com/in/stefanuskj23/
+
 📧 Email: stefanuskj.15@gmail.com
+
 📍 Location: Melbourne, Victoria, Australia
 
 📄 License
