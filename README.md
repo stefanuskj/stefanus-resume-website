@@ -1,114 +1,85 @@
-# stefanus-resume-website
-🚀 Modern, interactive resume website for Full Stack Software Developer | Responsive design with animations, emoji icons, professional sections | Built with HTML5, CSS3, JavaScript | Live on Vercel
+# 🎨 Stefanus Kevin Joses - Resume Website
 
-🌟 Features
-✨ Modern Design
+> Modern Dark Glassmorphism + Brutalist design resume website for a Full Stack Software Developer
 
-Interactive animations and smooth transitions
-Responsive design that works on all devices
-Professional gradient backgrounds and modern styling
-Emoji-based iconography for universal compatibility
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://stefanus-resume-website.vercel.app)
+[![Vercel](https://img.shields.io/badge/deployed-vercel-black)](https://vercel.com)
 
-📱 Fully Responsive
+## 🌟 Overview
 
-Mobile-first design approach
-Optimized for desktop, tablet, and mobile viewing
-Cross-browser compatibility
+Interactive resume website featuring cutting-edge Dark Glassmorphism and Brutalist design principles. Built with modern web technologies and optimized for performance across all devices.
 
-🎯 Professional Sections
+**[View Live Website →](https://stefanus-resume-website.vercel.app)**
 
-Education - Master's and Bachelor's degrees with specializations
-Technical Skills - Categorized with visual skill level indicators
-Work Experience - Detailed professional history with achievements
-Professional Highlights - Key statistics and accomplishments
-Awards & Recognition - Competition wins and achievements
+## ✨ Design Features
 
-🚀 Performance Optimized
+- 🎭 **Dark Glassmorphism** - Frosted glass effects with vibrant neon accents (cyan, purple, pink)
+- ⚡ **Brutalist Typography** - Bold, uppercase headers with high-contrast layouts
+- 🌈 **Animated Gradients** - Dynamic background with pulsing gradient orbs
+- 📱 **Fully Responsive** - Mobile-first design that works seamlessly on all devices
+- 🎯 **Smooth Scrolling** - Navigation with smooth anchor link transitions
 
-Fast loading times
-No external dependencies (except Google Fonts)
-Lightweight and efficient code
-SEO-friendly structure
+## 🛠️ Tech Stack
 
-🛠️ Technical Stack
+- **HTML5** - Semantic markup
+- **Tailwind CSS** - Utility-first styling with custom glassmorphism effects
+- **Vanilla JavaScript** - Lightweight interactions and smooth scrolling
+- **Vercel** - Fast, global CDN deployment
 
-HTML5 - Semantic markup and structure
-CSS3 - Advanced styling with flexbox/grid, animations, and gradients
-JavaScript (Vanilla) - Interactive elements and scroll animations
-Google Fonts - Typography (Poppins font family)
-Emojis - Universal iconography for maximum compatibility
+## 📋 Sections
 
-🎨 Design Highlights
-Visual Elements
+- **About** - Professional summary with contact links (Email, GitHub, LinkedIn)
+- **Stats Dashboard** - Key metrics (3+ years experience, .NET specialist, 100% ticket resolution, 4/5 rating)
+- **Technical Skills** - Categorized skills: Programming, Database/APIs, Web Technologies
+- **Work Experience** - Detailed job history with achievements
+  - ResearchMaster - Database Consultants Australia (2022-Present)
+  - camLine GmbH Indonesia (2021-2022)
+  - PDW Australia (2020-2021)
+- **Education** - Master's from Monash University, Bachelor's from Petra Christian University
+- **Achievements** - Key wins including IT VAGANZA 2013 1st place
 
-Animated profile avatar with rotating border
-Floating background tech icons
-Scroll-triggered section animations
-Interactive hover effects on cards
-Skill level visualization with animated dots
-Professional color gradients
+## 🚀 Performance
 
-User Experience
+- ⚡ Fast loading times with CDN delivery
+- 🎨 No heavy dependencies
+- 📦 Optimized assets
+- 🔒 HTTPS enabled
+- 🌍 Global availability
 
-Smooth scrolling and parallax effects
-Typing animation for name display
-Staggered animations for highlight cards
-Interactive tech icons with floating animations
+## 👨‍💻 About Stefanus Kevin Joses
 
-🚀 Quick Start
-View Live Website
-Visit the live website: stefanus-resume-website.vercel.app
+Full Stack Software Developer with **3+ years** of professional experience specializing in:
 
-🎯 Professional Summary
-Stefanus Kevin Joses is a skilled Full Stack Software Developer with 3+ years of professional experience and specialized expertise in Network and Data Security. Currently working at DCA - Database Consultants Australia, with a Master's degree from Monash University.
-Key Expertise:
+- **Languages:** C# (.NET 4.8, 6, 8), JavaScript, Java, Python
+- **Technologies:** RESTful APIs, OData, ASP.NET, Oracle SQL, Angular
+- **Specialization:** .NET ecosystem, API development, Networks & Security
+- **Education:** Master of Networks and Security (Monash University)
 
-Programming: C#, JavaScript (Angular), Java, Python
-Database & APIs: Oracle SQL, OData, ASP.NET, API Development
-Testing & Tools: Selenium, SoapUI, Debezium CDC
-Security: Network Security, Data Protection, Cybersecurity
+### Key Achievements
+- ✅ Completed major client projects ahead of schedule
+- ✅ 100% support ticket resolution during intensive periods
+- ✅ 4/5 performance rating with excellence in innovation
+- ✅ Successfully integrated legacy .NET 4.8 with modern .NET 8 systems
+- 🏆 1st Winner IT VAGANZA 2013 - Problem-solving & technical innovation
 
-📊 Professional Highlights
+## 📱 Connect
 
-🎓 Master's Degree in Networks & Security from Monash University
-💼 3+ Years of professional development experience
-🛡️ Security Specialist with expertise in network and data security
-🏆 Award Winner - 1st place in IT VAGANZA 2013 competition
-🔧 Full Stack experience in both frontend and backend development
+- **LinkedIn:** [stefanuskj23](https://www.linkedin.com/in/stefanuskj23)
+- **GitHub:** [stefanuskj](https://github.com/stefanuskj)
+- **Email:** stefanuskj.15@gmail.com
+- **Location:** Melbourne, Victoria, AU
 
-🌐 Deployment
-This website is deployed and hosted on Vercel for optimal performance and reliability:
+## 🎨 Design Inspiration
 
-✅ Global CDN for fast loading worldwide
-✅ Automatic HTTPS for security
-✅ Zero-downtime deployments
-✅ Custom domain support
+This design combines:
+- **Glassmorphism** - Apple's iOS/macOS design language with frosted glass effects
+- **Brutalism** - Bold, unapologetic typography and high-contrast neon colors
+- **Modern Trends** - 2025 web design aesthetics with depth and visual hierarchy
 
-📱 Responsive Design
-The website is fully optimized for all screen sizes:
+## 📄 License
 
-Desktop (1200px+) - Full layout with all animations
-Tablet (768px - 1199px) - Optimized grid layouts
-Mobile (< 768px) - Single-column layout with touch-friendly interactions
+MIT License - feel free to use this design for inspiration!
 
-🤝 Connect With Me
+---
 
-💼 LinkedIn: https://www.linkedin.com/in/stefanuskj23/
-
-📧 Email: stefanuskj.15@gmail.com
-
-📍 Location: Melbourne, Victoria, Australia
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-🙏 Acknowledgments
-
-Design inspiration from modern portfolio websites
-Icons and emojis for universal compatibility
-Responsive design principles for optimal user experience
-
-
-⭐ If you found this resume website helpful or inspiring, please consider giving it a star!
-
-Built with ❤️ by Stefanus Kevin Joses - © 2025
-
+**Built with 🖤 by Stefanus Kevin Joses** | © 2025
