@@ -4,1168 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stefanus Kevin Joses - Software Developer</title>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            border-radius: 20px;
-            overflow: hidden;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40v40zm40 0v-40h-40l40 40z'/%3E%3C/g%3E%3C/svg%3E") repeat;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
-        .profile-section {
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            position: relative;
-        }
-
-        .profile-image i {
-            font-size: 60px;
-            color: white;
-        }
-
-        .profile-image::after {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
-            z-index: -1;
-            animation: rotate 3s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .header .subtitle {
-            font-size: 1.4em;
-            opacity: 0.9;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.1);
-            padding: 10px 15px;
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-            opacity: 0.8;
-        }
-
-        .content {
-            padding: 50px 40px;
-        }
-
-        .section {
-            margin-bottom: 50px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #3498db;
-        }
-
-        .section-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #3498db, #2ecc71);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            font-size: 20px;
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-        }
-
-        .section h2 {
-            color: #2c3e50;
-            font-size: 1.8em;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        .education-item, .job-item {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            border-left: 5px solid #3498db;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .education-item::before, .job-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .education-item:hover::before, .job-item:hover::before {
-            opacity: 1;
-        }
-
-        .education-item:hover, .job-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            border-left-color: #2ecc71;
-        }
-
-        .item-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .item-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-
-        .item-content h3 {
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-size: 1.4em;
-            font-weight: 600;
-        }
-
-        .item-content .company, .item-content .institution {
-            color: #7f8c8d;
-            font-weight: 500;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .item-content .date {
-            color: #95a5a6;
-            font-style: italic;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .skill-category {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 25px;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            border-top: 4px solid #3498db;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-
-        .skill-category h3 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.2em;
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            padding: 10px 0;
-        }
-
-        .skill-name {
-            font-weight: 500;
-            color: #2c3e50;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .skill-level {
-            display: flex;
-            gap: 3px;
-        }
-
-        .skill-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ecf0f1;
-            transition: all 0.3s ease;
-        }
-
-        .skill-dot.active {
-            background: linear-gradient(135deg, #3498db, #2ecc71);
-            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
-        }
-
-        .job-responsibilities {
-            list-style: none;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .job-responsibilities li {
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
-            line-height: 1.6;
-        }
-
-        .job-responsibilities li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #2ecc71;
-            font-weight: bold;
-            width: 20px;
-            height: 20px;
-            background: rgba(46, 204, 113, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-        }
-
-        .award {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .award::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            animation: sparkle 10s linear infinite;
-        }
-
-        @keyframes sparkle {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .award-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .award-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .award h3 {
-            margin-bottom: 15px;
-            font-size: 1.4em;
-            font-weight: 600;
-        }
-
-        .award p {
-            opacity: 0.95;
-            line-height: 1.6;
-        }
-
-        .floating-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .floating-icon {
-            position: absolute;
-            color: rgba(255,255,255,0.1);
-            animation: floatAround 15s infinite linear;
-        }
-
-        @keyframes floatAround {
-            0% { transform: translateY(100vh) rotate(0deg); }
-            100% { transform: translateY(-100px) rotate(360deg); }
-        }
-
-        .tech-icons {
-            margin-top: 15px;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .tech-icon {
-            width: 35px;
-            height: 35px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            animation: techFloat 3s ease-in-out infinite;
-        }
-
-        .tech-icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        @keyframes techFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .highlight-card {
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .highlight-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .highlight-card i {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .highlight-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                border-radius: 15px;
-            }
-            
-            .header {
-                padding: 40px 20px;
-            }
-            
-            .header h1 {
-                font-size: 2.2em;
-            }
-            
-            .content {
-                padding: 40px 20px;
-            }
-            
-            .contact-info {
-                gap: 15px;
-            }
-            
-            .contact-item {
-                padding: 8px 12px;
-                font-size: 0.9em;
-            }
-            
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .item-header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .highlights-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        .glass { backdrop-filter: blur(16px); }
     </style>
 </head>
-<body>
-    <div class="floating-elements">
-        <div class="floating-icon" style="left: 10%; animation-delay: 0s; font-size: 30px;">💻</div>
-        <div class="floating-icon" style="left: 20%; animation-delay: 3s; font-size: 25px;">🖥️</div>
-        <div class="floating-icon" style="left: 30%; animation-delay: 6s; font-size: 35px;">💾</div>
-        <div class="floating-icon" style="left: 40%; animation-delay: 9s; font-size: 28px;">🖲️</div>
-        <div class="floating-icon" style="left: 50%; animation-delay: 12s; font-size: 32px;">📱</div>
-        <div class="floating-icon" style="left: 60%; animation-delay: 15s; font-size: 27px;">☁️</div>
-        <div class="floating-icon" style="left: 70%; animation-delay: 18s; font-size: 30px;">⚙️</div>
-        <div class="floating-icon" style="left: 80%; animation-delay: 21s; font-size: 25px;">🐛</div>
+<body class="bg-black text-white overflow-x-hidden">
+    <div class="fixed inset-0 opacity-30 pointer-events-none">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
+        <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse"></div>
     </div>
 
-    <div class="container">
-        <div class="header">
-            <div class="profile-section">
-                <div class="profile-image">
-                    <div style="font-size: 60px;">👨‍💼</div>
+    <nav class="fixed top-0 left-0 right-0 z-50 glass bg-black/50 border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-black uppercase"><span class="text-cyan-400">Stefanus</span> Kevin</div>
+                <div class="hidden md:flex gap-6">
+                    <a href="#about" class="text-white/80 hover:text-cyan-400 font-bold uppercase text-sm">About</a>
+                    <a href="#skills" class="text-white/80 hover:text-cyan-400 font-bold uppercase text-sm">Skills</a>
+                    <a href="#experience" class="text-white/80 hover:text-cyan-400 font-bold uppercase text-sm">Experience</a>
+                    <a href="#education" class="text-white/80 hover:text-cyan-400 font-bold uppercase text-sm">Education</a>
                 </div>
-                <h1>Stefanus Kevin Joses</h1>
-                <p class="subtitle">Full Stack Software Developer</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span style="font-size: 16px;">✉️</span>
-                        <span>stefanuskj.15@gmail.com</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-8 pt-24 pb-12">
+        <div class="mb-12" id="about">
+            <div class="glass bg-white/5 border border-white/10 p-6 md:p-8 shadow-2xl">
+                <div class="border-l-8 border-cyan-400 pl-6 mb-6">
+                    <h1 class="text-4xl md:text-7xl font-black uppercase mb-2">STEFANUS KEVIN JOSES</h1>
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <div class="h-1 w-24 bg-cyan-400"></div>
+                        <p class="text-xl md:text-2xl font-bold text-cyan-400 uppercase">Full Stack Software Developer</p>
                     </div>
-                    <div class="contact-item">
-                        <span style="font-size: 16px;">💼</span>
-                        <a href="https://www.linkedin.com/in/stefanuskj23" target="_blank" style="color: white; text-decoration: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                    <a href="mailto:stefanuskj.15@gmail.com" class="glass bg-white/5 border border-white/20 p-4 hover:bg-cyan-400/10 hover:border-cyan-400">
+                        <p class="text-xs text-white/60 uppercase font-bold">Email</p>
+                        <p class="text-white font-mono text-sm">stefanuskj.15@gmail.com</p>
+                    </a>
+                    <a href="https://github.com/stefanuskj" class="glass bg-white/5 border border-white/20 p-4 hover:bg-purple-400/10 hover:border-purple-400">
+                        <p class="text-xs text-white/60 uppercase font-bold">GitHub</p>
+                        <p class="text-white font-mono text-sm">github.com/stefanuskj</p>
+                    </a>
+                    <a href="https://linkedin.com/in/stefanuskj23" class="glass bg-white/5 border border-white/20 p-4 hover:bg-pink-400/10 hover:border-pink-400">
+                        <p class="text-xs text-white/60 uppercase font-bold">LinkedIn</p>
+                        <p class="text-white font-mono text-sm">stefanuskj23</p>
+                    </a>
+                    <div class="glass bg-white/5 border border-white/20 p-4">
+                        <p class="text-xs text-white/60 uppercase font-bold">Location</p>
+                        <p class="text-white font-mono text-sm">Melbourne, AU</p>
                     </div>
-                    <div class="contact-item">
-                        <span style="font-size: 16px;">🐙</span>
-                        <a href="https://github.com/stefanuskj" target="_blank" style="color: white; text-decoration: none;">GitHub Portfolio</a>
+                </div>
+
+                <div class="glass bg-white/5 border border-white/20 p-6">
+                    <h3 class="text-2xl font-black uppercase mb-4 flex items-center gap-3">
+                        <div class="h-1 w-12 bg-cyan-400"></div>About Me
+                    </h3>
+                    <p class="text-white/80 mb-4">Full Stack Software Developer with 3+ years of professional experience specializing in .NET ecosystem, API development, and modern web technologies. Strong background in Networks and Security with a Master's degree from Monash University.</p>
+                    <p class="text-white/60">Expert in building scalable enterprise applications, RESTful APIs, and end-to-end software solutions. Proven track record of delivering projects ahead of schedule, mentoring team members, and providing critical development support for complex systems.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="glass bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 border border-cyan-400/30 p-6">
+                <p class="text-5xl font-black text-cyan-400 mb-2">3+</p>
+                <p class="text-white/80 uppercase font-bold text-sm">Years Experience</p>
+            </div>
+            <div class="glass bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-400/30 p-6">
+                <p class="text-5xl font-black text-purple-400 mb-2">.NET</p>
+                <p class="text-white/80 uppercase font-bold text-sm">Specialist</p>
+            </div>
+            <div class="glass bg-gradient-to-br from-pink-500/10 to-pink-500/5 border border-pink-400/30 p-6">
+                <p class="text-5xl font-black text-pink-400 mb-2">100%</p>
+                <p class="text-white/80 uppercase font-bold text-sm">Resolution Rate</p>
+            </div>
+            <div class="glass bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 border border-cyan-400/30 p-6">
+                <p class="text-5xl font-black text-cyan-400 mb-2">4/5</p>
+                <p class="text-white/80 uppercase font-bold text-sm">Performance</p>
+            </div>
+        </div>
+
+        <div class="mb-12" id="skills">
+            <div class="glass bg-white/5 border-4 border-white/10 p-6 md:p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-1 w-16 bg-purple-400"></div>
+                    <h2 class="text-4xl font-black uppercase">Technical Skills</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-black text-cyan-400 uppercase mb-4">Programming</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">C# (.NET 4.8, 6, 8)</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">JavaScript</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">Java</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">Python</p></div>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <span style="font-size: 16px;">📍</span>
-                        <span>Melbourne, AU</span>
+                    <div>
+                        <h3 class="text-xl font-black text-purple-400 uppercase mb-4">Database & APIs</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">Oracle SQL</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">RESTful APIs</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">OData</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">ASP.NET</p></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-black text-pink-400 uppercase mb-4">Web Technologies</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">Angular</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">HTML 5</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">WordPress</p></div>
+                            <div class="glass bg-white/5 border border-white/20 p-4 text-center"><p class="text-white font-bold text-sm">Selenium</p></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="content">
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <span style="font-size: 20px;">🎓</span>
-                    </div>
-                    <h2>Education</h2>
+        <div class="mb-12" id="experience">
+            <div class="glass bg-white/5 border-4 border-white/10 p-6 md:p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-1 w-16 bg-cyan-400"></div>
+                    <h2 class="text-4xl font-black uppercase">Work Experience</h2>
                 </div>
-                <div class="education-item">
-                    <div class="item-header">
-                        <div class="item-icon">
-                            <span style="font-size: 18px;">🏛️</span>
-                        </div>
-                        <div class="item-content">
-                            <h3>Master of Networks and Security</h3>
-                            <div class="institution">
-                                <span style="font-size: 14px;">🏢</span>
-                                Monash University
-                            </div>
-                            <div class="date">
-                                <span style="font-size: 14px;">📅</span>
-                                2018 - 2019
-                            </div>
-                        </div>
+                <div class="space-y-6">
+                    <div class="glass bg-white/5 border-l-4 border-cyan-400 p-6">
+                        <h3 class="text-2xl font-black uppercase mb-1">Software Developer</h3>
+                        <p class="text-purple-400 font-bold">ResearchMaster - Database Consultants Australia</p>
+                        <p class="text-cyan-400 font-mono text-sm mb-3">Jul 2022 - Present | Melbourne, AU</p>
+                        <ul class="space-y-2 text-white/60 text-sm">
+                            <li>• Developing RESTful API endpoints across .NET 4.8, 6, 8</li>
+                            <li>• Built new features enhancing product functionality</li>
+                            <li>• Led end-to-end development with complete ownership</li>
+                            <li>• Completed major client project ahead of schedule</li>
+                            <li>• Cleared all support tickets during intensive periods</li>
+                            <li>• Mentored junior developers on best practices</li>
+                        </ul>
                     </div>
-                    <div class="tech-icons">
-                        <div class="tech-icon" title="Network Security"><span>🛡️</span></div>
-                        <div class="tech-icon" title="Cybersecurity"><span>🔒</span></div>
-                        <div class="tech-icon" title="Network Architecture"><span>🌐</span></div>
+                    <div class="glass bg-white/5 border-l-4 border-purple-400 p-6">
+                        <h3 class="text-2xl font-black uppercase mb-1">Software Engineer</h3>
+                        <p class="text-purple-400 font-bold">camLine GmbH Indonesia</p>
+                        <p class="text-purple-400 font-mono text-sm mb-3">Mar 2021 - May 2022 | Indonesia</p>
+                        <ul class="space-y-2 text-white/60 text-sm">
+                            <li>• Fixed bugs improving reliability and performance</li>
+                            <li>• Developed new features based on client requirements</li>
+                            <li>• Integrated Debezium for real-time data streaming</li>
+                            <li>• Collaborated with cross-functional teams</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="education-item">
-                    <div class="item-header">
-                        <div class="item-icon">
-                            <span style="font-size: 18px;">🎓</span>
-                        </div>
-                        <div class="item-content">
-                            <h3>Bachelor of Information Technology</h3>
-                            <div class="institution">
-                                <span style="font-size: 14px;">🏢</span>
-                                Petra Christian University
-                            </div>
-                            <div class="date">
-                                <span style="font-size: 14px;">📅</span>
-                                2013 - 2017
-                            </div>
-                        </div>
-                    </div>
-                    <p style="margin-top: 15px; color: #7f8c8d; position: relative; z-index: 1;"><strong>Specialisation:</strong> Data and Network Security</p>
-                    <div class="tech-icons">
-                        <div class="tech-icon" title="Data Security"><span>💾</span></div>
-                        <div class="tech-icon" title="Programming"><span>💻</span></div>
-                        <div class="tech-icon" title="System Analysis"><span>📊</span></div>
+                    <div class="glass bg-white/5 border-l-4 border-pink-400 p-6">
+                        <h3 class="text-2xl font-black uppercase mb-1">Web Developer</h3>
+                        <p class="text-pink-400 font-bold">PDW Australia</p>
+                        <p class="text-pink-400 font-mono text-sm mb-3">Feb 2020 - Mar 2021 | Australia</p>
+                        <ul class="space-y-2 text-white/60 text-sm">
+                            <li>• Built modern website for PDW Wheels</li>
+                            <li>• Integrated Wheels Fitment API</li>
+                            <li>• Conducted thorough testing and debugging</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <span style="font-size: 20px;">🛠️</span>
-                    </div>
-                    <h2>Technical Skills</h2>
+        <div class="mb-12" id="education">
+            <div class="glass bg-white/5 border-4 border-white/10 p-6 md:p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-1 w-16 bg-purple-400"></div>
+                    <h2 class="text-4xl font-black uppercase">Education</h2>
                 </div>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3><span style="font-size: 16px;">💻</span> Programming Languages</h3>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #239120;">C#</span>
-                                C# (.NET 4.8, 6, 8)
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #f7df1e;">JS</span>
-                                JavaScript
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #ed8b00;">☕</span>
-                                Java
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #3776ab;">🐍</span>
-                                Python
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
+                <div class="space-y-6">
+                    <div class="glass bg-white/5 border-l-4 border-purple-400 p-6">
+                        <h3 class="text-xl font-black uppercase">Master of Networks and Security</h3>
+                        <p class="text-purple-400 font-bold">Monash University</p>
+                        <p class="text-white/60 text-sm">2018 - 2019</p>
                     </div>
-                    
-                    <div class="skill-category">
-                        <h3><span style="font-size: 16px;">💾</span> Database & APIs</h3>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #f80000;">🔢</span>
-                                Oracle SQL
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #61dafb;">🔌</span>
-                                API Development
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #326ce5;">🧪</span>
-                                SoapUI
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3><span style="font-size: 16px;">🌐</span> Web Technologies</h3>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #dd0031;">🅰️</span>
-                                Angular
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #e34c26;">🌐</span>
-                                HTML 5
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #21759b;">📝</span>
-                                WordPress
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3><span style="font-size: 16px;">📊</span> Data & Streaming</h3>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #ff6b35;">📊</span>
-                                Debezium CDC
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #00d4aa;">📄</span>
-                                Apache Parquet
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3><span style="font-size: 16px;">🧪</span> Testing & Quality</h3>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #43b02a;">🤖</span>
-                                Selenium
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span style="color: #326ce5;">🧪</span>
-                                SoapUI
-                            </div>
-                            <div class="skill-level">
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot active"></div>
-                                <div class="skill-dot"></div>
-                                <div class="skill-dot"></div>
-                            </div>
-                        </div>
+                    <div class="glass bg-white/5 border-l-4 border-cyan-400 p-6">
+                        <h3 class="text-xl font-black uppercase">Bachelor of Information Technology</h3>
+                        <p class="text-cyan-400 font-bold">Petra Christian University</p>
+                        <p class="text-white/60 text-sm">2013 - 2017 | Specialisation: Data and Network Security</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <span style="font-size: 20px;">💼</span>
-                    </div>
-                    <h2>Work Experience</h2>
+        <div class="mb-12">
+            <div class="glass bg-white/5 border-4 border-white/10 p-6 md:p-8">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-1 w-16 bg-pink-400"></div>
+                    <h2 class="text-4xl font-black uppercase">Key Achievements</h2>
                 </div>
-                <div class="job-item">
-                    <div class="item-header">
-                        <div class="item-icon">
-                            <span style="font-size: 18px;">💻</span>
-                        </div>
-                        <div class="item-content">
-                            <h3>Software Developer</h3>
-                            <div class="company">
-                                <span style="font-size: 14px;">🏢</span>
-                                ResearchMaster - Database Consultants Australia
-                            </div>
-                            <div class="date">
-                                <span style="font-size: 14px;">📅</span>
-                                Jul 2022 - Present | Full-time
-                            </div>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="glass bg-cyan-500/10 border border-cyan-400/30 p-6">
+                        <h3 class="text-xl font-black uppercase mb-2">Ahead of Schedule</h3>
+                        <p class="text-white/70">Completed major client project earlier than estimated</p>
                     </div>
-                    <ul class="job-responsibilities">
-                        <li>Developing and maintaining RESTful API endpoints (OData & ASP.NET) across multiple .NET versions (.NET 4.8, .NET 6) for seamless functionality and performance</li>
-                        <li>Built multiple new features for the current product to enhance functionality and meet evolving business requirements</li>
-                        <li>Developed external tools and applications for clients using latest .NET 8 framework, including innovative PDF merging solutions and workflow reporting systems</li>
-                        <li>Led end-to-end development of critical business functionalities with complete ownership from design to deployment</li>
-                        <li>Successfully completed major client project ahead of schedule by converting web-based applications to standalone executables in accelerated timeframes</li>
-                        <li>Provided critical 3rd level development support, managing to clear all support tickets during intensive support periods and delivering timely hotfixes during client go-live phases</li>
-                        <li>Mentored team members and provided technical guidance, helping junior developers understand system architecture and development best practices</li>
-                        <li>Collaborated directly with external clients and stakeholders, demonstrating strong communication and project management skills</li>
-                    </ul>
-                    <div class="tech-icons">
-                        <div class="tech-icon" title="End-to-End Development"><span>🎯</span></div>
-                        <div class="tech-icon" title="Project Leadership"><span>👨‍💼</span></div>
-                        <div class="tech-icon" title="System Integration"><span>🔗</span></div>
-                        <div class="tech-icon" title="Mentoring"><span>👨‍🏫</span></div>
+                    <div class="glass bg-purple-500/10 border border-purple-400/30 p-6">
+                        <h3 class="text-xl font-black uppercase mb-2">100% Resolution</h3>
+                        <p class="text-white/70">Cleared all support tickets with zero backlog</p>
+                    </div>
+                    <div class="glass bg-pink-500/10 border border-pink-400/30 p-6">
+                        <h3 class="text-xl font-black uppercase mb-2">4/5 Performance</h3>
+                        <p class="text-white/70">Exceeded expectations in innovation</p>
+                    </div>
+                    <div class="glass bg-cyan-500/10 border border-cyan-400/30 p-6">
+                        <h3 class="text-xl font-black uppercase mb-2">Integration Expert</h3>
+                        <p class="text-white/70">Integrated legacy .NET 4.8 with .NET 8</p>
                     </div>
                 </div>
-
-                <div class="job-item">
-                    <div class="item-header">
-                        <div class="item-icon">
-                            <span style="font-size: 18px;">⚙️</span>
-                        </div>
-                        <div class="item-content">
-                            <h3>Software Engineer</h3>
-                            <div class="company">
-                                <span style="font-size: 14px;">🏢</span>
-                                camLine GmbH Indonesia
-                            </div>
-                            <div class="date">
-                                <span style="font-size: 14px;">📅</span>
-                                Mar 2021 - May 2022 | Full-time
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="job-responsibilities">
-                        <li>Fixed bugs and issues in existing software to improve overall reliability and performance</li>
-                        <li>Developed and implemented new features based on clients' requirements, enhancing functionality and user experience</li>
-                        <li>Successfully integrated new technologies like Debezium into the current system, enabling real-time data streaming</li>
-                        <li>Collaborated with cross-functional teams to ensure seamless implementation of new features and technologies</li>
-                        <li>Actively participated in agile development processes to deliver timely and efficient software solutions</li>
-                    </ul>
-                    <div class="tech-icons">
-                        <div class="tech-icon" title="Software Engineering"><span>🔧</span></div>
-                        <div class="tech-icon" title="Debezium CDC"><span>📊</span></div>
-                        <div class="tech-icon" title="Agile Development"><span>🔄</span></div>
-                        <div class="tech-icon" title="Team Collaboration"><span>👥</span></div>
-                    </div>
-                </div>
-
-                <div class="job-item">
-                    <div class="item-header">
-                        <div class="item-icon">
-                            <span style="font-size: 18px;">🌐</span>
-                        </div>
-                        <div class="item-content">
-                            <h3>Web Developer</h3>
-                            <div class="company">
-                                <span style="font-size: 14px;">🏢</span>
-                                PDW Australia
-                            </div>
-                            <div class="date">
-                                <span style="font-size: 14px;">📅</span>
-                                Feb 2020 - Mar 2021 | Contract
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="job-responsibilities">
-                        <li>Built a new and modern website for PDW Wheels, enhancing the company's online presence and user experience</li>
-                        <li>Collaborated closely with stakeholders to understand their requirements and design the website accordingly</li>
-                        <li>Integrated the Wheels Fitment API into the website, providing customers with accurate and real-time wheel fitment information</li>
-                        <li>Conducted thorough testing and debugging to ensure the website's functionality and performance met the highest standards</li>
-                    </ul>
-                    <div class="tech-icons">
-                        <div class="tech-icon" title="Web Development"><span>💻</span></div>
-                        <div class="tech-icon" title="API Integration"><span>🔗</span></div>
-                        <div class="tech-icon" title="UI/UX Design"><span>🎨</span></div>
-                        <div class="tech-icon" title="Testing"><span>🐛</span></div>
-                    </div>
+                <div class="glass bg-yellow-500/10 border-2 border-yellow-400/50 p-8 text-center">
+                    <h3 class="text-2xl font-black uppercase mb-3">1st Winner IT VAGANZA 2013</h3>
+                    <p class="text-white/70">Excellence in problem-solving and technical innovation</p>
                 </div>
             </div>
+        </div>
 
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <span style="font-size: 20px;">🚀</span>
-                    </div>
-                    <h2>Key Achievements</h2>
-                </div>
-                <div class="highlights-grid">
-                    <div class="highlight-card" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">⚡</div>
-                        <h3>Ahead of Schedule</h3>
-                        <p>Completed major client project much earlier than estimated delivery time</p>
-                    </div>
-                    <div class="highlight-card" style="background: linear-gradient(135deg, #3498db, #2980b9);">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">🎯</div>
-                        <h3>100% Resolution</h3>
-                        <p>Cleared all support tickets during intensive support periods with zero backlog</p>
-                    </div>
-                    <div class="highlight-card" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">⭐</div>
-                        <h3>4/5 Rating</h3>
-                        <p>Exceeded expectations in multiple performance areas including innovation and problem-solving</p>
-                    </div>
-                    <div class="highlight-card" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">🏗️</div>
-                        <h3>System Integration</h3>
-                        <p>Successfully integrated legacy .NET 4.8 systems with modern .NET 8 applications</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <span style="font-size: 20px;">📊</span>
-                    </div>
-                    <h2>Professional Highlights</h2>
-                </div>
-                <div class="highlights-grid">
-                    <div class="highlight-card" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">💻</div>
-                        <h3>3+ Years</h3>
-                        <p>Professional Development Experience</p>
-                    </div>
-                    <div class="highlight-card" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">🔧</div>
-                        <h3>Full Stack</h3>
-                        <p>Frontend & Backend Development</p>
-                    </div>
-                    <div class="highlight-card" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">🛡️</div>
-                        <h3>Security</h3>
-                        <p>Network & Data Security Specialist</p>
-                    </div>
-                    <div class="highlight-card" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
-                        <div style="font-size: 2.5em; margin-bottom: 15px;">🎓</div>
-                        <h3>Master's</h3>
-                        <p>Networks & Security from Monash</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <span style="font-size: 20px;">🏆</span>
-                    </div>
-                    <h2>Awards & Recognition</h2>
-                </div>
-                <div class="award">
-                    <div class="award-content">
-                        <div style="font-size: 40px; margin-bottom: 15px;">🥇</div>
-                        <h3>🏆 1st Winner of IT VAGANZA 2013</h3>
-                        <p>Held by Surabaya Engineering University (Sekolah Tinggi Teknik Surabaya) - An IT competition that involves teamwork and logical thinking, demonstrating excellence in problem-solving and technical innovation.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="glass bg-white/5 border border-white/10 p-6 text-center">
+            <p class="text-white/60 text-sm">© 2025 Stefanus Kevin Joses. All rights reserved.</p>
         </div>
     </div>
 
     <script>
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
-        }, {
-            threshold: 0.1
-        });
-
-        // Observe all sections
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Animate skill dots on scroll
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const skillDots = entry.target.querySelectorAll('.skill-dot.active');
-                    skillDots.forEach((dot, index) => {
-                        setTimeout(() => {
-                            dot.style.transform = 'scale(1.2)';
-                            setTimeout(() => {
-                                dot.style.transform = 'scale(1)';
-                            }, 150);
-                        }, index * 100);
-                    });
-                }
-            });
-        });
-
-        document.querySelectorAll('.skill-category').forEach(category => {
-            skillObserver.observe(category);
-        });
-
-        // Add floating animation to tech icons
-        document.querySelectorAll('.tech-icon').forEach((icon, index) => {
-            icon.style.animationDelay = `${index * 0.1}s`;
-        });
-
-        // Create additional floating icons dynamically
-        function createFloatingIcon() {
-            const icons = ['💻', '🖥️', '💾', '🖲️', '📱', '☁️', '⚙️', '🐛'];
-            const randomIcon = icons[Math.floor(Math.random() * icons.length)];
-            const floatingIcon = document.createElement('div');
-            floatingIcon.className = 'floating-icon';
-            floatingIcon.textContent = randomIcon;
-            floatingIcon.style.left = Math.random() * 100 + '%';
-            floatingIcon.style.animationDelay = '0s';
-            floatingIcon.style.fontSize = (Math.random() * 10 + 20) + 'px';
-            floatingIcon.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            
-            document.querySelector('.floating-elements').appendChild(floatingIcon);
-            
-            // Remove the icon after animation completes
-            setTimeout(() => {
-                floatingIcon.remove();
-            }, 25000);
-        }
-
-        // Create new floating icons periodically
-        setInterval(createFloatingIcon, 3000);
-
-        // Add hover effects to job items
-        document.querySelectorAll('.job-item, .education-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Profile image click effect
-        document.querySelector('.profile-image').addEventListener('click', function() {
-            this.style.animation = 'none';
-            setTimeout(() => {
-                this.style.animation = '';
-            }, 100);
-        });
-
-        // Parallax effect for header
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const header = document.querySelector('.header');
-            if (header) {
-                header.style.transform = `translateY(${scrolled * 0.3}px)`;
-            }
-        });
-
-        // Add staggered animation to highlight cards
-        document.querySelectorAll('.highlight-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.2}s`;
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            
-            const cardObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }, index * 200);
-                    }
-                });
-            });
-            
-            cardObserver.observe(card);
-        });
-
-        // Add typing effect to main title
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typing effect after page loads
-        window.addEventListener('load', () => {
-            const title = document.querySelector('.header h1');
-            const originalText = title.textContent;
-            typeWriter(title, originalText, 100);
         });
     </script>
 </body>
