@@ -82,4 +82,4 @@ MIT License - feel free to use this design for inspiration!
 
 ---
 
-**Built with 🖤 by Stefanus Kevin Joses** | © 2025
+**By Stefanus Kevin Joses** | © 2025
