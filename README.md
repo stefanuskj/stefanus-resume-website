@@ -1,4 +1,4 @@
-# 🎨 Stefanus Kevin Joses - Resume Website
+# Stefanus Kevin Joses - Resume Website
 
 > Modern Dark Glassmorphism + Brutalist design resume website for a Full Stack Software Developer
 
