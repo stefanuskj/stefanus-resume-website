@@ -366,6 +366,12 @@
                             <div class="skill-tag glass bg-green-400/5 border border-green-400/20 px-4 py-2 hover:border-green-400/40 hover:bg-green-400/5">
                                 <p class="text-white font-semibold text-sm">XtraReports</p>
                             </div>
+                            <div class="skill-tag glass bg-violet-400/5 border border-violet-400/30 px-4 py-2 hover:border-violet-400/60 hover:bg-violet-400/10">
+                                <p class="text-violet-300 font-bold text-sm">SEQ — Centralised Logging</p>
+                            </div>
+                            <div class="skill-tag glass bg-violet-400/5 border border-violet-400/20 px-4 py-2 hover:border-violet-400/40 hover:bg-violet-400/5">
+                                <p class="text-white font-semibold text-sm">Serilog</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -383,7 +389,7 @@
                 </div>
                 <p class="text-white/40 font-mono-custom text-xs mb-8 ml-16">External API & platform integrations delivered at ResearchMaster</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                     <!-- ROR Card -->
                     <div class="integration-card ror-glow glass bg-white/[0.03] border border-green-400/25 p-7" style="--card-color: #10b981;">
@@ -441,10 +447,38 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- SEQ Card -->
+                    <div class="integration-card glass bg-white/[0.03] border border-violet-400/25 p-7" style="--card-color: #8b5cf6; box-shadow: 0 0 20px rgba(139,92,246,0.15);">
+                        <div class="flex items-start justify-between mb-5">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-violet-400/10 border border-violet-400/30 flex items-center justify-center">
+                                    <span class="font-display text-violet-400 text-xl">SEQ</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-2xl uppercase text-white leading-none">SEQ</h3>
+                                    <h3 class="font-display text-2xl uppercase text-violet-400 leading-none">Centralised Logging</h3>
+                                </div>
+                            </div>
+                            <span class="badge bg-violet-400/10 border border-violet-400/30 text-violet-400">Live</span>
+                        </div>
+                        <p class="text-white/55 text-sm leading-relaxed mb-5">
+                            Migrated ResearchMaster's .NET application logging to SEQ as the centralised structured log server. Integrated Serilog as the logging provider to capture, enrich, and forward structured events — enabling real-time log querying, filtering by severity, and full traceability across the application stack.
+                        </p>
+                        <div class="border-t border-white/[0.06] pt-4">
+                            <p class="font-mono-custom text-[10px] text-white/30 uppercase tracking-widest mb-3">Tech stack</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge bg-white/5 border border-white/10 text-white/60">SEQ</span>
+                                <span class="badge bg-white/5 border border-white/10 text-white/60">Serilog</span>
+                                <span class="badge bg-white/5 border border-white/10 text-white/60">C# .NET</span>
+                                <span class="badge bg-white/5 border border-white/10 text-white/60">Structured Logging</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Integration metrics row -->
-                <div class="mt-6 grid grid-cols-3 gap-4">
+                <div class="mt-6 grid grid-cols-4 gap-4">
                     <div class="glass bg-white/[0.02] border border-white/[0.06] p-4 text-center">
                         <p class="font-display text-3xl text-green-400 mb-1">ROR</p>
                         <p class="font-mono-custom text-[10px] text-white/40 uppercase tracking-widest">API Lookup</p>
@@ -452,6 +486,10 @@
                     <div class="glass bg-white/[0.02] border border-white/[0.06] p-4 text-center">
                         <p class="font-display text-3xl text-orange-400 mb-1">WD</p>
                         <p class="font-mono-custom text-[10px] text-white/40 uppercase tracking-widest">DB Migration</p>
+                    </div>
+                    <div class="glass bg-white/[0.02] border border-white/[0.06] p-4 text-center">
+                        <p class="font-display text-3xl text-violet-400 mb-1">SEQ</p>
+                        <p class="font-mono-custom text-[10px] text-white/40 uppercase tracking-widest">Centralised Logs</p>
                     </div>
                     <div class="glass bg-white/[0.02] border border-white/[0.06] p-4 text-center">
                         <p class="font-display text-3xl text-purple-400 mb-1">AU</p>
@@ -494,6 +532,9 @@
                                 <span>Developed a <span class="text-orange-400 font-semibold">Workday</span> data migration script to map and import HR staff records into ResearchMaster's Oracle database for university client onboarding</span>
                             </li>
                             <li class="flex gap-3"><div class="timeline-dot bg-cyan-400/60 mt-1.5"></div><span>Migrated OIDC token storage from sessionStorage to in-memory for Angular app security hardening</span></li>
+                            <li class="flex gap-3"><div class="timeline-dot bg-violet-400/60 mt-1.5 flex-shrink-0"></div>
+                                <span>Introduced <span class="text-violet-400 font-semibold">SEQ</span> as the centralised structured log server using Serilog, replacing fragmented file-based logging with real-time queryable event streams across the full .NET stack</span>
+                            </li>
                             <li class="flex gap-3"><div class="timeline-dot bg-cyan-400/60 mt-1.5"></div><span>Led end-to-end development with full ownership — completed major client project ahead of schedule</span></li>
                             <li class="flex gap-3"><div class="timeline-dot bg-cyan-400/60 mt-1.5"></div><span>Cleared 100% of support tickets during intensive release periods; mentored junior developers on best practices</span></li>
                         </ul>
@@ -600,7 +641,7 @@
                 <div class="w-6 h-6 bg-cyan-400 flex items-center justify-center">
                     <span class="font-display text-black text-sm leading-none">SK</span>
                 </div>
-                <p class="font-mono-custom text-xs text-white/40">© 2025 Stefanus Kevin Joses. All rights reserved.</p>
+                <p class="font-mono-custom text-xs text-white/40">© 2026 Stefanus Kevin Joses. All rights reserved.</p>
             </div>
             <div class="flex gap-6">
                 <a href="mailto:stefanuskj.15@gmail.com" class="font-mono-custom text-xs text-white/30 hover:text-cyan-400 transition-colors">Email</a>
